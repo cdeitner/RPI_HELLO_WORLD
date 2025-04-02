@@ -2,6 +2,7 @@
 Examples of how to use RPIO as a drop-in replacement for RPi.GPIO
 RPIO Documentation: http://pythonhosted.org/RPIO
 """
+import RPi.GPIO
 import RPIO
 import time
 
