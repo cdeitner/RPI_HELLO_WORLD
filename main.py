@@ -2,21 +2,16 @@
 Examples of how to use RPIO as a drop-in replacement for RPi.GPIO
 RPIO Documentation: http://pythonhosted.org/RPIO
 """
-import RPi.GPIO
-import RPIO
+import RPi.GPIO as GPIO
 import time
 
 # set up GPIO output channel
-RPIO.setup(8, RPIO.OUT)
+GPIO.setup(21, GPIO.OUT)
 
 while(1):
 # flash led on GPIO 21
-  RPIO.output(21, True)
+  GPIO.output(21, GPIO.HIGH)  
   time.sleep(1)
-  RPIO.output(8, False)
+  GPIO.output(21, GPIO.LOW)
   time.sleep(1)
 
-
-# reset every channel that has been set up by this program,
-# and unexport interrupt gpio interfaces
-RPIO.cleanup()
