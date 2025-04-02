@@ -7,6 +7,7 @@ import time
 
 # set up GPIO output channel
 GPIO.setup(21, GPIO.OUT)
+GPIO.setmode(GPIO.BOARD)
 
 while(1):
 # flash led on GPIO 21
